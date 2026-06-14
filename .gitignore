@@ -1,0 +1,15 @@
+# Archivos originales y de configuración local
+plan.html
+plan_de_contingencia_seres_cercanos/
+
+# Archivos de Staticrypt
+.staticrypt.json
+encrypted/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+*.tmp
