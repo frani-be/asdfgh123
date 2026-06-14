@@ -13,3 +13,5 @@ Thumbs.db
 # Logs y temporales
 *.log
 *.tmp
+.env
+build.sh
