@@ -14,11 +14,23 @@
         <meta http-equiv="pragma" content="no-cache" />
 
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Nunito:wght@400;600&display=swap');
             .staticrypt-hr {
                 margin-top: 20px;
                 margin-bottom: 20px;
                 border: 0;
-                border-top: 1px solid #eee;
+                border-top: 2px solid #c8b5e8;
+            }
+            .staticrypt-title {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.8em;
+                color: #7a6a9a;
+                margin-bottom: 10px;
+            }
+            .staticrypt-subtitle {
+                color: #9a85b8;
+                font-size: 0.95em;
+                margin-bottom: 25px;
             }
 
             .staticrypt-page {
@@ -31,12 +43,14 @@
             .staticrypt-form {
                 position: relative;
                 z-index: 1;
-                background: #ffffff;
+                background: linear-gradient(180deg, #faf8ff 0%, #f5f0ff 100%);
                 max-width: 360px;
                 margin: 0 auto 100px;
                 padding: 45px;
                 text-align: center;
-                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+                border-radius: 20px;
+                box-shadow: 0 10px 40px rgba(182,150,255,0.25), 0 5px 15px rgba(182,150,255,0.15);
+                border: 1px solid #e8e0f5;
             }
 
             .staticrypt-form input[type="password"],
@@ -53,11 +67,16 @@
             .staticrypt-password-container {
                 position: relative;
                 outline: 0;
-                background: #f2f2f2;
+                background: #fff;
                 width: 100%;
-                border: 0;
+                border: 2px solid #e8e0f5;
+                border-radius: 10px;
                 margin: 0 0 15px;
                 box-sizing: border-box;
+                overflow: hidden;
+            }
+            .staticrypt-form input[type="password"]::placeholder {
+                color: #b8a8c8;
             }
 
             .staticrypt-toggle-password-visibility {
@@ -75,19 +94,23 @@
             .staticrypt-form .staticrypt-decrypt-button {
                 text-transform: uppercase;
                 outline: 0;
-                background: #4CAF50;
+                background: #9a85b8;
                 width: 100%;
                 border: 0;
+                border-radius: 25px;
                 padding: 15px;
                 color: #ffffff;
                 font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 1px;
                 cursor: pointer;
+                transition: all 0.3s ease;
             }
 
             .staticrypt-form .staticrypt-decrypt-button:hover,
             .staticrypt-form .staticrypt-decrypt-button:active,
             .staticrypt-form .staticrypt-decrypt-button:focus {
-                background: #4CAF50;
+                background: #9a85b8;
                 filter: brightness(92%);
             }
 
@@ -103,30 +126,36 @@
             .staticrypt-content {
                 height: 100%;
                 margin-bottom: 1em;
-                background: #76B852;
-                font-family: "Arial", sans-serif;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+                background: linear-gradient(180deg, #f8f5ff 0%, #f3eeff 50%, #ece4ff 100%);
+                font-family: 'Nunito', sans-serif;
             }
 
             .staticrypt-instructions {
                 margin-top: -1em;
                 margin-bottom: 1em;
             }
-
-            .staticrypt-title {
-                font-size: 1.5em;
+            .staticrypt-page {
+                width: 360px;
+                padding: 8% 0 0;
+                margin: auto;
+                box-sizing: border-box;
             }
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+
 
             label.staticrypt-remember {
                 display: flex;
                 align-items: center;
                 margin-bottom: 1em;
+                color: #7a6a9a;
             }
 
             .staticrypt-remember input[type="checkbox"] {
                 transform: scale(1.5);
                 margin-right: 1em;
+                accent-color: #9a85b8;
             }
 
             .hidden {
@@ -184,8 +213,8 @@
             <div class="staticrypt-page">
                 <div class="staticrypt-form">
                     <div class="staticrypt-instructions">
-                        <p class="staticrypt-title">Protected Page</p>
-                        <p></p>
+                        <p class="staticrypt-title">✨ Bienvenide ✨</p>
+                        <p class="staticrypt-subtitle">Este espacio es especial y privado.<br>Solo para personas de confianza.</p>
                     </div>
 
                     <hr class="staticrypt-hr" />
@@ -210,7 +239,7 @@
 
                         <label id="staticrypt-remember-label" class="staticrypt-remember hidden">
                             <input id="staticrypt-remember" type="checkbox" name="remember" />
-                            Recordarme
+                            Recuérdame 🎶
                         </label>
 
                         <input type="submit" class="staticrypt-decrypt-button" value="ENTRAR ✨" />
